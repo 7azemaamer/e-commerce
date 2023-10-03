@@ -23,26 +23,30 @@ import CheckOut from './Components/CheckOut/CheckOut';
 import WishListProvider from './Context/WishListContext';
 import WishList from './Components/WishList/WishList';
 
-let routers = createHashRouter([
-  {path:"/", element:<Layout/> , children:[
-    {path:"login" , element:<Login/>},
-    {path:"register" , element: <Register/>},
-    {path:"resetpassword" , element: <ResetPassword/>},
-    {path:"/" , element: <ProtectRoute><Home/></ProtectRoute>},
-    {path:"cart" , element: <ProtectRoute><Cart/></ProtectRoute>},
-    {path:"categories" , element: <ProtectRoute><Categories/></ProtectRoute>},
-    {path:"profile" , element: <ProtectRoute><Profile/></ProtectRoute>},
-    {path:"brands" , element: <ProtectRoute><Brands/></ProtectRoute>},
-    {path:"products" , element: <ProtectRoute><Products/></ProtectRoute>},
-    {path:"wishlist" , element: <ProtectRoute><WishList/></ProtectRoute>},
-    {path:"allorders" , element: <ProtectRoute><Orders/></ProtectRoute>},
-    {path:"checkout/:id" , element: <ProtectRoute><CheckOut/></ProtectRoute>},
-    {path:"brand/:id" , element: <ProtectRoute><Brand/></ProtectRoute>},
-    {path:"category/:slug" , element: <ProtectRoute><Category/></ProtectRoute>},
-    {path:"product/:id" , element:<ProtectRoute><ProductDetails/></ProtectRoute> },
-    {path:"*" , element: <NotFound/>}
-  ]}
-])
+let routers = createBrowserRouter({
+  basename: '/app',
+  routes: [
+    {path:"/", element:<Layout/> , children:[
+      {path:"login" , element:<Login/>},
+      {path:"register" , element: <Register/>},
+      {path:"resetpassword" , element: <ResetPassword/>},
+      {path:"/" , element: <ProtectRoute><Home/></ProtectRoute>},
+      {path:"cart" , element: <ProtectRoute><Cart/></ProtectRoute>},
+      {path:"categories" , element: <ProtectRoute><Categories/></ProtectRoute>},
+      {path:"profile" , element: <ProtectRoute><Profile/></ProtectRoute>},
+      {path:"brands" , element: <ProtectRoute><Brands/></ProtectRoute>},
+      {path:"products" , element: <ProtectRoute><Products/></ProtectRoute>},
+      {path:"wishlist" , element: <ProtectRoute><WishList/></ProtectRoute>},
+      {path:"allorders" , element: <ProtectRoute><Orders/></ProtectRoute>},
+      {path:"checkout/:id" , element: <ProtectRoute><CheckOut/></ProtectRoute>},
+      {path:"brand/:id" , element: <ProtectRoute><Brand/></ProtectRoute>},
+      {path:"category/:slug" , element: <ProtectRoute><Category/></ProtectRoute>},
+      {path:"product/:id" , element:<ProtectRoute><ProductDetails/></ProtectRoute> },
+      {path:"*" , element: <NotFound/>}
+    ]}
+  ],
+});
+
 
 export default function App() {
 
