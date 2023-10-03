@@ -133,3 +133,11 @@ a , a:hover{
     opacity: 1;
     transition: ease-in-out 0.3s;
 } 
+.nav-link.active{
+    border: 1px solid var(--main-color);
+    border-radius: 7px;
+}
+.nav-link{
+   padding: 0 5px;
+   margin: 0 5px;
+}

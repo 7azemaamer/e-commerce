@@ -50,7 +50,7 @@ export default function App() {
     <UserTokenProvider>
       <CartContextProvider>
         <WishListProvider>
-        <RouterProvider router={routers}></RouterProvider>
+        <RouterProvider  router={routers}></RouterProvider>
         </WishListProvider>
         <Toaster/>
       </CartContextProvider>

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../Assets/images/freshcart-logo.svg";
 import { UserToken } from "../../Context/UserToken";
 import { CartContext } from "../../Context/CartContext";
@@ -51,24 +51,24 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             {userToken?<ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" to={"/"}>
+                <NavLink className="nav-link" to={"/"}>
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"products"}>
+                <NavLink className="nav-link" to={"products"}>
                   Products
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/categories"}>
+                <NavLink className="nav-link" to={"/categories"}>
                   Categories
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/brands"}>
+                <NavLink className="nav-link" to={"/brands"}>
                   Brands
-                </Link>
+                </NavLink>
               </li>
             </ul>: ""}
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -117,12 +117,12 @@ export default function Navbar() {
               </li>
               </>:<>
               <li className="nav-item">
-                <Link className="nav-link" to={"login"}>
+                <Link className="nav-Link" to={"login"}>
                   Login
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"register"}>
+                <Link className="nav-Link" to={"register"}>
                   Register
                 </Link>
               </li>
