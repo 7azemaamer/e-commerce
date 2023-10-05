@@ -116,12 +116,12 @@ export default function Navbar() {
                 </Link>
               </li>
               </>:<>
-              <li className="nav-item">
+              <li className="nav-item d-flex align-items-center">
                 <Link className="nav-Link" to={"login"}>
                   Login
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item d-flex align-items-center mx-3">
                 <Link className="nav-Link" to={"register"}>
                   Register
                 </Link>

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import Style from  "./Login.module.css";
 import { useFormik } from 'formik';
 import * as yup from "yup";
-import { useNavigate} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import { UserToken } from '../../Context/UserToken';
 import { Helmet } from 'react-helmet';
@@ -63,9 +63,16 @@ export default function Login() {
           <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.password} className="form-control mb-3" id="password" name="password" type="password" />
           {formik.errors.password && formik.touched.password? <div className="alert alert-danger mt-2 p-2">{formik.errors.password}</div>:""}
 
-          <p onClick={forgetPassword} className=' ps-3 cursor-pointer my-3 text-muted '>
-            Forget my password? (write your email above)
-          </p>
+          <div className="row">
+            <div className="col-md-6">
+              <p onClick={forgetPassword} className=' ps-3 cursor-pointer text-muted fw-bold '>
+                Forget my password? (write your email above)
+              </p>
+            </div>
+            <div className="col-md-6">
+              <Link to={"/register"}><p className='cursor-pointer text-end text-muted fw-bold'>Register now</p></Link>
+            </div>
+          </div>
           {!loading ?<button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn form-btn">Submit</button> : <button disabled={!(formik.isValid && formik.dirty)} type="submit" className={`btn form-btn ${Style.wider}`}><i className={`fas fa-spinner fa-spin`}></i></button>}
         </form>
       </div>
