@@ -23,9 +23,7 @@ import CheckOut from './Components/CheckOut/CheckOut';
 import WishListProvider from './Context/WishListContext';
 import WishList from './Components/WishList/WishList';
 
-let routers = createHashRouter({
-  basename: '/app',
-  routes: [
+let routers = createHashRouter([
     {path:"/", element:<Layout/> , children:[
       {path:"login" , element:<Login/>},
       {path:"register" , element: <Register/>},
@@ -44,8 +42,7 @@ let routers = createHashRouter({
       {path:"product/:id" , element:<ProtectRoute><ProductDetails/></ProtectRoute> },
       {path:"*" , element: <NotFound/>}
     ]}
-  ],
-});
+]);
 
 
 export default function App() {
