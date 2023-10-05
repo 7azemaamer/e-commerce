@@ -23,7 +23,7 @@ import CheckOut from './Components/CheckOut/CheckOut';
 import WishListProvider from './Context/WishListContext';
 import WishList from './Components/WishList/WishList';
 
-let routers = createBrowserRouter({
+let routers = createHashRouter({
   basename: '/app',
   routes: [
     {path:"/", element:<Layout/> , children:[
