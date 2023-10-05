@@ -31,7 +31,7 @@ export default function Brands() {
         <>
           <div className="row py-4 gy-4">
             {data?.data.data.map((brand) => (
-              <div className="col-md-3" key={brand._id}>
+              <div className="col-lg-3 col-md-4 col-6" key={brand._id}>
                 <Link to={`/brand/${brand._id}`}>
                   <div className="category cursor-pointer">
                     <img

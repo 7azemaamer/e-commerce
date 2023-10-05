@@ -17,17 +17,26 @@ export default function MainHomeSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows:false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          infinite: true,
+          dots: false,
+        }
+      }
+    ]
   };
   return <>
-      <div className="row gx-0 my-4">
-        <div className="col-md-10">
+      <div className="mainSlider row gx-0 my-4">
+        <div className="col-lg-10 col-md-8 col-6">
           <Slider {...settings}>
             <img height={500} className='w-100' src={slide1} alt="mainCover" />
             <img height={500} className='w-100' src={slide2} alt="mainCover" />
             <img height={500} className='w-100' src={slide3} alt="mainCover" />
           </Slider>
         </div>
-        <div className="col-md-2">
+        <div className="col-lg-2 col-md-4 col-6">
           <img height={250} className='w-100' src={cover1} alt="mainCover" />
           <img height={250} className='w-100' src={cover2} alt="mainCover" />
         </div>

@@ -54,7 +54,7 @@ export default function FeaturedProduct() {
     visible={true}
   />
   </div>:<div className="row gy-3">
-    {data?.data.data.map((product)=> <div key={product.id} className='productHolder position-relative col-md-2'>
+    {data?.data.data.map((product)=> <div key={product.id} className='productHolder position-relative col-lg-2 col-md-4 col-5 mx-auto'>
     <button onClick={() => addProductWishlist(product.id)} className='btn btn-sm p-0'><i className="wishlist fa-solid fa-heart fa-2x position-absolute mt-4 m-3"></i></button>
      <div className="product cursor-pointer py-3 px-2">
      <Link to={`/product/${product.id}`}>

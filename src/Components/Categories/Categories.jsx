@@ -26,7 +26,7 @@ export default function Categories() {
       </div>:<>
       <div className="row py-4 gy-4">
           {data?.data.data.map((category)=><>
-              <div className=' col-md-3'>
+              <div className=' col-lg-3 col-md-4 col-6'>
                 <Link to={`/category/${category.slug}`}>
                   <div className='category cursor-pointer'>
                     <img className='w-100' height={300} src={category.image} alt={category.name} />

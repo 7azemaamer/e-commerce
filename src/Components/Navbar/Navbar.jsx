@@ -73,9 +73,9 @@ export default function Navbar() {
             </ul>: ""}
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <div className="nav-link">
+                <div className="nav-link arrangeLinks">
                   <a target="_blank" href="https://www.facebook.com/7azemaamer">
-                    <i className="fab fa-instagram mx-1"></i>
+                    <i className="fab fa-instagram me-1"></i>
                   </a>
                   <a target="_blank" href="https://www.facebook.com/7azemaamer">
                     <i className="fab fa-facebook mx-1"></i>
@@ -100,23 +100,21 @@ export default function Navbar() {
                   Logout
                 </span>
               </li>
-              <li className="nav-item d-flex align-items-center mx-2">
-                <Link to={'profile'}><i className="fa-solid fa-user fs-6"></i></Link>
-              </li>
-              <li className="nav-item d-flex align-items-center mx-2">
-                <Link className="position-relative" to={"/cart"}>
-                  <i className="fa-solid mx-2 fs-4 pt-1 fa-cart-shopping text-main"></i>
-                  {numOfCartItems!==0 ? <div className="bg-danger font-sm-2 text-white position-absolute top-50 start-50 translate-middle-x rounded-circle px-1">{numOfCartItems}</div> :""}
+              <li className="nav-item d-flex align-items-center">
+                <Link to={'profile'}>
+                  <i className="fa-solid fa-user fs-4 me-3"></i>
                 </Link>
-              </li>
-              <li className="nav-item d-flex align-items-center position-relative">
+                <Link className="position-relative" to={"/cart"}>
+                  <i className="fa-solid fs-4 pt-1 fa-cart-shopping text-main me-3"></i>
+                  {numOfCartItems!==0 ? <div className="bg-danger font-sm-2 text-white position-absolute top-50 start-50 translate-middle-x rounded-circle ">{numOfCartItems}</div> :""}
+                </Link>
                 <Link to={'wishlist'}>
-                  <i className="fa-solid fs-3 fa-heart mt-1 mx-3 text-main"></i>
+                  <i className="fa-solid fs-3 fa-heart mt-1 text-main"></i>
                   {Number(countWishlist)!==0 ? <div className="bg-danger font-sm-2 text-white position-absolute top-50 start-50 translate-middle-x rounded-circle px-1">{countWishlist}</div> :""}
                 </Link>
               </li>
               </>:<>
-              <li className="nav-item d-flex align-items-center">
+              <li className="nav-item d-flex align-items-center me-3">
                 <Link className="nav-Link" to={"login"}>
                   Login
                 </Link>

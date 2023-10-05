@@ -19,8 +19,30 @@ export default function PopulerHomeSlider() {
     infinite: true,
     speed: 500,
     slidesToShow: 7,
-    slidesToScroll: 1,
-    autoPlay:true
+    slidesToScroll: 2,
+    autoplay:true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      }
+    ]
   };
   return <div className='my-3'>
       <h3 className='mb-3'>Shop Popular Category</h3>

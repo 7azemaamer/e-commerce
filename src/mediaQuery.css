@@ -1,0 +1,14 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .productHolder{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainSlider .col-lg-10{
+        height: 300px !important;
+    }
+    .mainSlider .col-lg-2{
+        height: 150px !important;
+        margin-bottom: 400px !important;
+    }
+}
