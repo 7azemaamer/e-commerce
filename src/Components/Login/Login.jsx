@@ -6,7 +6,6 @@ import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import { UserToken } from '../../Context/UserToken';
 import { Helmet } from 'react-helmet';
-import toast from 'react-hot-toast';
 export default function Login() {
 
   let navigate = useNavigate();
