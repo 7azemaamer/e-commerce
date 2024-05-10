@@ -1,144 +1,150 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
-:root
-{
-    --main-color:#0aae0a;
-    --light-color:#f0f3f2;
-    --shadow: #919eab33 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
-    --font-family:'Encode Sans Expanded', sans-serif;
-    --rating-color:#ffc908;
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+:root {
+  --main-color: #0aae0a;
+  --light-color: #f0f3f2;
+  --shadow: #919eab33 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
 }
-.form-btn{
-    background-color: var(--main-color) !important;
-    color: #fff !important;
+.form-btn {
+  background-color: var(--main-color) !important;
+  color: #fff !important;
 }
-.form-btn:hover{
-    background-color: #0aa000 !important;
+.form-btn:hover {
+  background-color: #0aa000 !important;
 }
-body{
-    font-family: var(--font-family) !important;
+body {
+  font-family: var(--font-family) !important;
 }
-.bg-light-sm{
-    background-color: rgba(0, 0, 0, 0.123) !important;
-    box-shadow: var(--shadow);
+.bg-light-sm {
+  background-color: rgba(0, 0, 0, 0.123) !important;
+  box-shadow: var(--shadow);
 }
-.rating-color
-{
-    color: var(--rating-color);
+.rating-color {
+  color: var(--rating-color);
 }
-.cursor-pointer
-{
-    cursor: pointer;
+.cursor-pointer {
+  cursor: pointer;
 }
-a , a:hover{
-    color: black !important;
-    text-decoration: none !important;
+a,
+a:hover {
+  color: black !important;
+  text-decoration: none !important;
 }
-.product:hover , .category
-{
-    box-shadow: var(--shadow);
-    border: solid 1px var(--main-color);
+.product:hover,
+.category {
+  box-shadow: var(--shadow);
+  border: solid 1px var(--main-color);
 }
-.network{
-    padding: 20px;
-    position: fixed;
-    background-color: #fff;
-    box-shadow: var(--shadow);
-    z-index: 9999999;
-    left: 30px;
-    bottom: 30px;
-    transition: 0.5s;
+.network {
+  padding: 20px;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  z-index: 9999999;
+  left: 30px;
+  bottom: 30px;
+  transition: 0.5s;
 }
 
-.product .btn 
-{
-    transition: transform 0.3s , opacity 1s;
-    transform: translateY(100%);
-    opacity: 0;
+.product .btn {
+  transition: transform 0.3s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
 }
-.product:hover .btn 
-{
-    opacity: 1;
-    transform: translateY(0%);
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.font-sm-2 {
+  font-size: 11px;
+}
+.font-sm {
+  font-size: 14px;
+}
+.border-main {
+  border: 1px solid var(--main-color) !important;
+}
+.text-main {
+  color: var(--main-color) !important;
+}
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+.bg-gray-order {
+  background-color: var(--light-color) !important;
+  box-shadow: var(--shadow);
+  min-width: 500px;
+}
+.min-height {
+  min-height: 85vh;
+}
+.border-sm {
+  border-bottom: 1px solid rgba(145, 158, 171, 0.12);
+  padding-bottom: 10px;
+}
+.trolley {
+  font-size: 100px;
+  transform: rotate(-45deg);
+}
+.eno {
+  font-size: 100px;
+}
+.btn-hover:hover {
+  background-color: #277621 !important;
+}
+.wishlist {
+  color: #f0f0f0 !important;
+  background-color: rgba(10, 174, 10, 0.5) !important;
+  padding: 10px;
+  border-radius: 50%;
+  left: -50%;
+  transition: ease-in-out 0.3s;
+}
+.btn-rmv {
+  top: 6%;
+  left: 12%;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+}
+.productHolder {
+  overflow: hidden;
+}
+.productHolder:hover .wishlist {
+  left: 0%;
+  transition: ease-in-out 0.3s;
+}
+.productHolder:hover .btn-rmv {
+  opacity: 1;
+  transition: ease-in-out 0.3s;
+}
+.nav-link.active {
+  border: 1px solid var(--main-color);
+  border-radius: 7px;
+  padding-left: 5px;
+}
+.nav-link {
+  padding: 0 5px;
+  margin: 0 5px;
+}
 
-}
-.font-sm-2{
-    font-size: 11px;
-}
-.font-sm
-{
-    font-size: 14px;
-}
-.border-main{
-    border: 1px solid var(--main-color) !important;
-}
-.text-main
-{
-    color: var(--main-color) !important;
-}
-.bg-main
-{
-    background-color: var(--main-color) !important;
-}
-.bg-main-light 
-{
-    background-color: var(--light-color) !important;
-}
-.bg-gray-order{
-    background-color: var(--light-color) !important;
-    box-shadow: var(--shadow);
-    min-width: 500px;
-}
-.min-height{
-    min-height: 85vh;
-}
-.border-sm{
-    border-bottom: 1px solid rgba(145,158,171,.12);
-    padding-bottom: 10px;
-}
-.trolley{
-    font-size: 100px;
-    transform: rotate(-45deg);
-}
-.eno{
-    font-size: 100px;
-}
-.btn-hover:hover{
-    background-color: #277621 !important;
-}
-.wishlist{
-    color: #f0f0f0 !important;
-    background-color: rgba(10, 174, 10 , 0.5) !important;
-    padding: 10px;
-    border-radius: 50%;
-    left: -50%;
-    transition: ease-in-out .3s;
-}
-.btn-rmv{
-    top: 6%;
-    left: 12% ;
-    opacity: 0;
-    transition: ease-in-out .3s;
-}
-.productHolder{
-    overflow: hidden;
-}
-.productHolder:hover .wishlist 
-{
-    left: 0%;
-    transition: ease-in-out 0.3s;
-} 
-.productHolder:hover .btn-rmv  
-{
-    opacity: 1;
-    transition: ease-in-out 0.3s;
-} 
-.nav-link.active{
-    border: 1px solid var(--main-color);
-    border-radius: 7px;
-    padding-left:5px ;
-}
-.nav-link{
-   padding: 0 5px;
-   margin: 0 5px;
+@media (max-width: 768px) {
+  .mainSlider,
+  .socialMedia,
+  .pfp {
+    display: none !important;
+    opacity: 0 !important;
+  }
+  .category img {
+    height: 200px !important;
+  }
+  .shopPopulerCat img{
+    height: 150px !important;
+  }
 }
